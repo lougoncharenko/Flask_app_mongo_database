@@ -6,4 +6,15 @@
 
 </div>
 
+### Core Technologies & Concepts Used
+
+- `Python`:
+  - Flask Servers
+  - Virtual Enviroments
+- [Mongo DB](https://www.mongodb.com/home)
+    - pymongo
+    - ObjectId
+- `HTML`
+- `CSS`
+
 
