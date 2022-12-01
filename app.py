@@ -19,6 +19,8 @@ def index():
         todos.insert_one({'content': content, 'priority': priority})
         return redirect(url_for('index'))
     all_todos = todos.find()
+    all_todos.collation({'locale': 'en'})
+    all_todos.sort('priority')
     return render_template('index.html', todos=all_todos)
 
 @app.post('/<id>/delete/')
