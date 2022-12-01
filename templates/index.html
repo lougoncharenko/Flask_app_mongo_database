@@ -8,26 +8,28 @@
 <body>
     <h1>FlaskTODO</h1>
 	<hr>
-	<div class="content">
+	<div class="container">
 		<form action="/" method="post">
-		
 				<h2>Enter a Todo:</h2>
 				  <input type="text" name="content" placeholder="Todo Content">
 			<div>
-        <p>Priority:</p>
-				  
+        <p>Priority:</p> 
         <p><label>
           <input name="priority" required type="radio" value="Important">
           Important</label></p>
-				
         <p><label>
           <input name="priority" required type="radio" value="Unimportant">
           Unimportant</label></p>
-				
-        </div>
-
-			<p><button type="submit">Submit</button></p>
+      </div>
+			<button type="submit">Submit</button>
 		</form>
 	</div>
+  <section class="todo-container">
+    {% for todo in todos %}
+      <div class="todo">
+          <p class="{{ todo.priority }}">{{ todo.content }} <em>({{ todo.priority }})</em></p>
+      </div>
+  {% endfor %}
+</section>
 </body>
 </html>
