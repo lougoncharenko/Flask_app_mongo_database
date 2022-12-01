@@ -21,6 +21,11 @@ def index():
     all_todos = todos.find()
     return render_template('index.html', todos=all_todos)
 
+@app.post('/<id>/delete/')
+def delete(id):
+    todos.delete_one({"_id": ObjectId(id)})
+    return redirect(url_for('index'))
+
 
 if __name__ == '__main__':
     app.run(debug=True, port = 3000)
