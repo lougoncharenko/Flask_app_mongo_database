@@ -32,17 +32,34 @@ justify-items: center;
 }
 
 .todo {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
     width:fit-content;
 	padding: 20px;
 	margin: 10px;
 	background-color: #eee;
-    font-size: 20px;
-    
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif ; 
+}
+
+.Important {
+    color: red
 }
 
 button, input[type=submit] {
 	padding: 0.5rem;
 	background-color: #000;
+	border-radius: 0.5rem;
+	border: none;
+	color: #fff;
+	font-size: 1rem;
+}
+
+#delete-button {
+    margin-left:10px;
+    padding: 0.5rem;
+	background-color: red;
 	border-radius: 0.5rem;
 	border: none;
 	color: #fff;
